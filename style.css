@@ -1,0 +1,144 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --White: hsl(0, 100%, 100%);
+}
+
+body {
+  background-color: var(--Very-Light-Gray);
+}
+main {
+  min-width: 375px;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  margin: 30px 30px 40px 30px;
+
+}
+.header {
+display: flex;
+justify-content: center;
+}
+
+.header-2 {
+
+  text-align: center;
+}
+/*flex-basis: 80%;
+margin: auto;
+}*/
+
+.container {
+  display: grid;
+  grid-template-areas:
+    ". A ."
+    "C A D"
+    "C B D"
+    ". B .";
+  gap: 30px;
+}
+
+.box-1 {
+  grid-area: C;
+  align-items: center;
+  margin-bottom: 10px;
+}
+h1 {
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+h2,
+strong {
+  color: var(--Very-Dark-Blue);
+}
+p {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: Var(--Grayish-Blue);
+  font-weight: 300;
+}
+.smaller-font {
+  font-size: 16px ;
+}
+
+.box-2 {
+  grid-area: A;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.box-3 {
+  grid-area: B;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.box-4 {
+  grid-area: D;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.article {
+  background: var(--White);
+  border-top: 3px solid var(--Cyan);
+  margin: 20px 10px 20px 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  
+}
+.part-1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+.part-3 {
+  padding-bottom: 30px;
+  width: 64;
+  height: 64;
+}
+.border-top-2 {
+  border-top: 3px solid var(--Red);
+}
+.border-top-3 {
+  border-top: 3px solid var(--Orange);
+}
+.border-top-4 {
+  border-top: 3px solid var(--Blue);
+}
+
+.image-on-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+@media(max-width: 765px) {
+  .container {
+
+    display: flex;
+    flex-direction: column;
+
+  }
